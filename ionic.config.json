@@ -1,0 +1,7 @@
+{
+  "name": "lobby",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
