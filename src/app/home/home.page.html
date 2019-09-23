@@ -1,14 +1,39 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      <ion-text class="lobby-title" color="primary">Lobby Room</ion-text>
+      
+      <ion-text class="escaner" color="secondary">Escaner</ion-text>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-card>
+      <ion-item>
+        <!-- <ion-thumbnail slot="start"> -->
+          <!-- <ion-img [src]="../../assets/img/default_profile.png"></ion-img> -->
+          <img class="imagen" src="../../assets/img/curro.png" width="200" height="250"/>
+        <!-- </ion-thumbnail> -->
+      </ion-item>
+    <ion-item>
+        <ion-icon name="person" slot="start"></ion-icon>
+      <ion-label>Francisco de Paula Gutierrez Soto</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Quedan 2 consumiciones</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Seleccione consumiciones</ion-label>
+      <ion-select okText="Elegir" cancelText="Volver" [(ngModel)]="consumiciones">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-button class="boton" color="primary" (click)="consumir()">Consumir</ion-button>
+    </ion-item>
+  </ion-card>
 </ion-content>
